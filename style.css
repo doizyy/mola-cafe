@@ -1,0 +1,944 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+
+
+
+/* =====================
+   NAVBAR
+===================== */
+
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    padding: 20px 8%;
+
+
+    background: #1f1a17;
+    color: white;
+}
+
+
+nav h1 {
+    color: #d4a373;
+}
+
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.menu a:hover {
+    color: #d4a373;
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+
+
+/* =====================
+   HERO
+===================== */
+
+
+.hero {
+    min-height: 650px;
+
+
+    display: flex;
+    align-items: center;
+
+
+    padding: 80px 10%;
+
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.55)
+        ),
+        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1600&q=80");
+
+
+    background-size: cover;
+    background-position: center;
+
+
+    color: white;
+}
+
+
+.hero-content {
+    max-width: 650px;
+}
+
+
+.hero-subtitle {
+    color: #d4a373;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+
+.hero h2 {
+    font-size: 55px;
+    margin: 20px 0;
+}
+
+
+.hero h2 span {
+    color: #d4a373;
+    display: block;
+}
+
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+.hero-btn {
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.hero-btn.primary {
+    background: #d4a373;
+    color: white;
+}
+
+
+.hero-btn.secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+
+
+
+/* =====================
+   SECTIONS
+===================== */
+
+
+section {
+    padding: 80px 10%;
+}
+
+
+section h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+
+
+
+/* =====================
+   MENU
+===================== */
+
+
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+
+.filter-btn {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    background: #e5ddd4;
+    cursor: pointer;
+}
+
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #d4a373;
+    color: white;
+}
+
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+
+.card h3,
+.card p,
+.card strong,
+.card button {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.card h3 {
+    margin-top: 20px;
+}
+
+
+.card p {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+.card strong {
+    font-size: 20px;
+    color: #9a6338;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+
+
+/* SEPETE EKLE */
+
+
+.add-to-cart {
+    display: block;
+
+
+    width: calc(100% - 40px);
+
+
+    margin-top: 15px;
+
+
+    padding: 13px;
+
+
+    border: none;
+    border-radius: 8px;
+
+
+    background: #1f1a17;
+    color: white;
+
+
+    font-weight: bold;
+
+
+    cursor: pointer;
+}
+
+
+.add-to-cart:hover {
+    background: #d4a373;
+}
+
+
+
+
+/* =====================
+   HAKKIMIZDA
+===================== */
+
+
+#hakkimizda {
+    background: #ede5dc;
+    text-align: center;
+}
+
+
+#hakkimizda p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+
+
+/* =====================
+   YORUMLAR
+===================== */
+
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.review-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.07);
+}
+
+
+.stars {
+    color: #d4a373;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+.review-card p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+
+
+/* =====================
+   GALERİ
+===================== */
+
+
+#galeri {
+    background: #ede5dc;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+
+
+/* =====================
+   İLETİŞİM
+===================== */
+
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+}
+
+
+.contact-info,
+.reservation,
+.map {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.07);
+}
+
+
+.contact-info p {
+    margin: 18px 0;
+}
+
+
+.contact-whatsapp {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 20px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+.reservation {
+    grid-column: span 1;
+}
+
+
+.reservation h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+
+#reservationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+
+#reservationForm input,
+#reservationForm select,
+#reservationForm textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+
+#reservationForm button {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #1f1a17;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+#reservationForm button:hover {
+    background: #d4a373;
+}
+
+
+.map {
+    grid-column: span 2;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+
+/* =====================
+   WHATSAPP
+===================== */
+
+
+.whatsapp {
+    position: fixed;
+
+
+    right: 25px;
+    bottom: 95px;
+
+
+    width: 55px;
+    height: 55px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background: #25d366;
+    color: white;
+
+
+    border-radius: 50%;
+
+
+    font-size: 28px;
+
+
+    text-decoration: none;
+
+
+    z-index: 900;
+}
+
+
+
+
+/* =====================
+   SEPET BUTONU
+===================== */
+
+
+.cart-button {
+    position: fixed;
+
+
+    right: 25px;
+    bottom: 25px;
+
+
+    border: none;
+
+
+    background: #1f1a17;
+    color: white;
+
+
+    padding: 14px 20px;
+
+
+    border-radius: 30px;
+
+
+    font-size: 15px;
+    font-weight: bold;
+
+
+    cursor: pointer;
+
+
+    z-index: 901;
+
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.25);
+}
+
+
+.cart-button:hover {
+    background: #d4a373;
+}
+
+
+#cartCount {
+    display: inline-block;
+
+
+    margin-left: 6px;
+
+
+    padding: 3px 8px;
+
+
+    background: #d4a373;
+
+
+    border-radius: 20px;
+}
+
+
+
+
+/* =====================
+   SEPET PANELİ
+===================== */
+
+
+.cart-panel {
+    position: fixed;
+
+
+    top: 0;
+    right: -420px;
+
+
+    width: 400px;
+    max-width: 90%;
+
+
+    height: 100vh;
+
+
+    background: white;
+
+
+    z-index: 2000;
+
+
+    padding: 25px;
+
+
+    box-shadow: -5px 0 25px rgba(0,0,0,.25);
+
+
+    transition: right .3s ease;
+
+
+    overflow-y: auto;
+}
+
+
+.cart-panel.active {
+    right: 0;
+}
+
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    padding-bottom: 20px;
+
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.cart-header h3 {
+    font-size: 25px;
+}
+
+
+.cart-header button {
+    border: none;
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+.empty-cart {
+    text-align: center;
+    color: #777;
+    padding: 40px 0;
+}
+
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    padding: 18px 0;
+
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.cart-item-info strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+
+    margin-top: 8px;
+}
+
+
+.quantity button {
+    width: 28px;
+    height: 28px;
+
+
+    border: none;
+    border-radius: 5px;
+
+
+    background: #eee;
+
+
+    cursor: pointer;
+
+
+    font-weight: bold;
+}
+
+
+.remove-item {
+    border: none;
+    background: #c0392b;
+    color: white;
+
+
+    padding: 7px 10px;
+
+
+    border-radius: 6px;
+
+
+    cursor: pointer;
+}
+
+
+.cart-total {
+    font-size: 20px;
+
+
+    padding: 25px 0;
+}
+
+
+.order-whatsapp {
+    width: 100%;
+
+
+    padding: 15px;
+
+
+    border: none;
+    border-radius: 8px;
+
+
+    background: #25d366;
+    color: white;
+
+
+    font-size: 16px;
+    font-weight: bold;
+
+
+    cursor: pointer;
+}
+
+
+
+
+/* =====================
+   FOOTER
+===================== */
+
+
+footer {
+    background: #1f1a17;
+    color: white;
+    padding: 50px 10% 20px;
+}
+
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+
+.footer-content h3,
+.footer-content h4 {
+    color: #d4a373;
+    margin-bottom: 15px;
+}
+
+
+.footer-content a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 8px 0;
+}
+
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+/* =======================
+   YUKARI CIKMA BUTONU
+======================= */
+
+#backToTop {
+    position: fixed;
+    right: 25px;
+    bottom: 150px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:hover {
+    transform: translateY(-4px);
+}
+
+/* =====================
+   MOBİL
+===================== */
+
+
+@media (max-width: 768px) {
+
+
+    .menu {
+        display: none;
+
+
+        position: absolute;
+
+
+        top: 70px;
+        left: 0;
+
+
+        width: 100%;
+
+
+        background: #1f1a17;
+
+
+        flex-direction: column;
+
+
+        padding: 20px;
+    }
+
+
+    .menu.active {
+        display: flex;
+    }
+
+
+    .hamburger {
+        display: block;
+    }
+
+
+    .hero {
+        min-height: 550px;
+    }
+
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+
+
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .map {
+        grid-column: span 1;
+    }
+
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cart-panel {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .whatsapp {
+        right: 15px;
+        bottom: 85px;
+    }
+
+
+    .cart-button {
+        right: 15px;
+        bottom: 20px;
+    }
+}

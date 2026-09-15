@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Mola Café | Kahve & Lezzet</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+    <nav>
+        <h1>Mola Café ☕</h1>
+
+
+        <div class="hamburger" id="hamburger">
+            ☰
+        </div>
+
+
+        <div class="menu" id="menu-nav">
+            <a href="#anasayfa">Ana Sayfa</a>
+            <a href="#menu">Menü</a>
+            <a href="#hakkimizda">Hakkımızda</a>
+            <a href="#yorumlar">Yorumlar</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#iletisim">İletişim</a>
+        </div>
+    </nav>
+
+
+
+
+    <!-- HERO -->
+    <section class="hero" id="anasayfa">
+
+
+        <div class="hero-content">
+
+
+            <span class="hero-subtitle">MOLA CAFÉ</span>
+
+
+            <h2>
+                Kahvenin ve Lezzetin
+                <span>Buluşma Noktası</span>
+            </h2>
+
+
+            <p>
+                Özenle hazırlanan kahveler, nefis yemekler
+                ve keyifli anlar için sizi bekliyoruz.
+            </p>
+
+
+            <div class="hero-buttons">
+
+
+                <a href="#menu" class="hero-btn primary">
+                    Menüyü İncele
+                </a>
+
+
+                <a href="#iletisim" class="hero-btn secondary">
+                    Bize Ulaşın
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- MENÜ -->
+    <section id="menu">
+
+
+        <h2>Menümüz 🍽️</h2>
+
+
+        <div class="menu-buttons">
+
+
+            <button class="filter-btn active" data-category="all">
+                Tümü
+            </button>
+
+
+            <button class="filter-btn" data-category="coffee">
+                ☕ Kahveler
+            </button>
+
+
+            <button class="filter-btn" data-category="food">
+                🍔 Yemekler
+            </button>
+
+
+            <button class="filter-btn" data-category="dessert">
+                🍰 Tatlılar
+            </button>
+
+
+        </div>
+
+
+
+
+        <div class="menu-items">
+
+
+            <!-- LATTE -->
+            <div class="card coffee">
+
+
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=800&q=80"
+                    alt="Latte">
+
+
+                <h3>Latte</h3>
+
+
+                <p>
+                    Yumuşak içimli espresso ve süt.
+                </p>
+
+
+                <strong>120 TL</strong>
+
+
+                <button class="add-to-cart"
+                    data-name="Latte"
+                    data-price="120">
+
+
+                    Sepete Ekle
+
+
+                </button>
+
+
+            </div>
+
+
+
+
+            <!-- AMERICANO -->
+            <div class="card coffee">
+
+
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+                    alt="Americano">
+
+
+                <h3>Americano</h3>
+
+
+                <p>
+                    Yoğun espresso ve sıcak su.
+                </p>
+
+
+                <strong>100 TL</strong>
+
+
+                <button class="add-to-cart"
+                    data-name="Americano"
+                    data-price="100">
+
+
+                    Sepete Ekle
+
+
+                </button>
+
+
+            </div>
+
+
+
+
+            <!-- BURGER -->
+            <div class="card food">
+
+
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+                    alt="Burger">
+
+
+                <h3>Özel Burger</h3>
+
+
+                <p>
+                    Özel soslu nefis burger.
+                </p>
+
+
+                <strong>250 TL</strong>
+
+
+                <button class="add-to-cart"
+                    data-name="Özel Burger"
+                    data-price="250">
+
+
+                    Sepete Ekle
+
+
+                </button>
+
+
+            </div>
+
+
+
+
+            <!-- PİZZA -->
+            <div class="card food">
+
+
+                <img src="pizza.png" alt="Pizza">
+
+
+                <h3>Pizza</h3>
+
+
+                <p>
+                    Taze malzemelerle hazırlanan pizza.
+                </p>
+
+
+                <strong>280 TL</strong>
+
+
+                <button class="add-to-cart"
+                    data-name="Pizza"
+                    data-price="280">
+
+
+                    Sepete Ekle
+
+
+                </button>
+
+
+            </div>
+
+
+
+
+            <!-- PATATES -->
+            <div class="card food">
+
+
+                <img src="patates1.png"
+                    alt="Patates Kızartması">
+
+
+                <h3>Patates Kızartması</h3>
+
+
+                <p>
+                    Özel baharatlarla hazırlanmış nefis patates.
+                </p>
+
+
+                <strong>200 TL</strong>
+
+
+                <button class="add-to-cart"
+                    data-name="Patates Kızartması"
+                    data-price="200">
+
+
+                    Sepete Ekle
+
+
+                </button>
+
+
+            </div>
+
+
+
+
+            <!-- CHEESECAKE -->
+            <div class="card dessert">
+
+
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80"
+                    alt="Cheesecake">
+
+
+                <h3>Cheesecake</h3>
+
+
+                <p>
+                    Taze yapılan lezzetli cheesecake.
+                </p>
+
+
+                <strong>190 TL</strong>
+
+
+                <button class="add-to-cart"
+                    data-name="Cheesecake"
+                    data-price="190">
+
+
+                    Sepete Ekle
+
+
+                </button>
+
+
+            </div>
+
+
+
+
+            <!-- ÇİKOLATALI PASTA -->
+            <div class="card dessert">
+
+
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+                    alt="Çikolatalı Pasta">
+
+
+                <h3>Çikolatalı Pasta</h3>
+
+
+                <p>
+                    Yoğun çikolata ile hazırlanan pasta.
+                </p>
+
+
+                <strong>180 TL</strong>
+
+
+                <button class="add-to-cart"
+                    data-name="Çikolatalı Pasta"
+                    data-price="180">
+
+
+                    Sepete Ekle
+
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- HAKKIMIZDA -->
+    <section id="hakkimizda">
+
+
+        <h2>Hakkımızda</h2>
+
+
+        <p>
+            Mola Café, kaliteli kahve ve lezzetli yemekleri
+            keyifli bir ortamda sunmak için kuruldu.
+        </p>
+
+
+    </section>
+
+
+
+
+    <!-- YORUMLAR -->
+    <section id="yorumlar">
+
+
+        <h2>Müşterilerimiz Ne Diyor? ⭐</h2>
+
+
+        <div class="reviews">
+
+
+            <div class="review-card">
+
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+
+                <p>
+                    "Kahveleri gerçekten çok güzel.
+                    Ortamı da oldukça sıcak ve keyifli."
+                </p>
+
+
+                <strong>Ceren K.</strong>
+
+
+            </div>
+
+
+
+
+            <div class="review-card">
+
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+
+                <p>
+                    "Burger ve Cheesecake harikaydı.
+                    Kesinlikle tekrar geleceğim."
+                </p>
+
+
+                <strong>Mehmet T.</strong>
+
+
+            </div>
+
+
+
+
+            <div class="review-card">
+
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+
+                <p>
+                    "Arkadaşlarla oturmak için çok güzel
+                    bir mekan. Kahvesi başarılı."
+                </p>
+
+
+                <strong>Elif Y.</strong>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- GALERİ -->
+    <section id="galeri">
+
+
+        <h2>Bizden Kareler 📸</h2>
+
+
+        <div class="gallery">
+
+
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+                alt="Kahve">
+
+
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24"
+                alt="Kafe">
+
+
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+                alt="Restoran">
+
+
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+                alt="Kahve">
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- İLETİŞİM -->
+    <section id="iletisim">
+
+
+        <h2>Bizimle İletişime Geçin</h2>
+
+
+        <div class="contact-container">
+
+
+            <!-- BİLGİLER -->
+            <div class="contact-info">
+
+
+                <h3>Mola Café</h3>
+
+
+                <p>📍 Atatürk Caddesi No:15, Uşak</p>
+
+
+                <p>📞 0533 763 46 72</p>
+
+
+                <p>⏱ Her Gün 09:00 - 00:00</p>
+
+
+                <a href="https://wa.me/905337634672"
+                    target="_blank"
+                    class="contact-whatsapp">
+
+
+                    WhatsApp'tan Ulaş
+
+
+                </a>
+
+
+            </div>
+
+
+
+
+            <!-- REZERVASYON -->
+            <div class="reservation">
+
+
+                <h3>Rezervasyon Yap 🍴</h3>
+
+
+                <form id="reservationForm">
+
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Adınız Soyadınız"
+                        required>
+
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Telefon Numaranız"
+                        required>
+
+
+                    <input
+                        type="date"
+                        id="date"
+                        required>
+
+
+                    <select id="time" required>
+
+
+                        <option value="">
+                            Saat Seçin
+                        </option>
+
+
+                        <option>12:00</option>
+                        <option>13:00</option>
+                        <option>14:00</option>
+                        <option>18:00</option>
+                        <option>19:00</option>
+                        <option>20:00</option>
+                        <option>21:00</option>
+                        <option>22:00</option>
+
+
+                    </select>
+
+
+
+
+                    <select id="people" required>
+
+
+                        <option value="">
+                            Kişi Sayısı
+                        </option>
+
+
+                        <option>1 kişi</option>
+                        <option>2 kişi</option>
+                        <option>3 kişi</option>
+                        <option>4 kişi</option>
+                        <option>5 kişi</option>
+                        <option>6+ kişi</option>
+
+
+                    </select>
+
+
+
+
+                    <textarea
+                        id="note"
+                        placeholder="Eklemek istediğiniz bir not var mı?"
+                        rows="4"></textarea>
+
+
+
+
+                    <button type="submit">
+                        WhatsApp'tan Rezervasyon Yap
+                    </button>
+
+
+                </form>
+
+
+            </div>
+
+
+
+
+            <!-- HARİTA -->
+            <div class="map">
+
+
+                <iframe
+                    src="https://www.google.com/maps?q=Uşak%20Merkez&output=embed"
+                    width="100%"
+                    height="350"
+                    style="border:0;"
+                    loading="lazy">
+                </iframe>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/905337634672"
+        class="whatsapp"
+        target="_blank"
+        aria-label="WhatsApp">
+
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+
+    </a>
+
+
+
+
+    <!-- FOOTER -->
+    <footer>
+
+
+        <div class="footer-content">
+
+
+            <div>
+
+
+                <h3>Mola Café</h3>
+
+
+                <p>
+                    Kahvenin ve lezzetin
+                    buluşma noktası.
+                </p>
+
+
+            </div>
+
+
+
+
+            <div>
+
+
+                <h4>Hızlı Menü</h4>
+
+
+                <a href="#anasayfa">Ana Sayfa</a>
+                <a href="#menu">Menü</a>
+                <a href="#galeri">Galeri</a>
+                <a href="#iletisim">İletişim</a>
+
+
+            </div>
+
+
+
+
+            <div>
+
+
+                <h4>İletişim</h4>
+
+
+                <p>📍 Uşak, Türkiye</p>
+                <p>📞 0533 763 46 72</p>
+                <p>📸 Instagram</p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="copyright">
+
+
+            © 2026 Mola Café — Tüm hakları saklıdır.
+
+
+        </div>
+
+
+    </footer>
+
+
+
+
+    <!-- SEPET BUTONU -->
+    <button class="cart-button" id="cartButton">
+
+
+        🛒 Sepet
+
+
+        <span id="cartCount">0</span>
+
+
+    </button>
+
+
+
+
+    <!-- SEPET PANELİ -->
+    <div class="cart-panel" id="cartPanel">
+
+
+        <div class="cart-header">
+
+
+            <h3>Sepetim 🛒</h3>
+
+
+            <button id="closeCart">
+                ✕
+            </button>
+
+
+        </div>
+
+
+
+
+        <div id="cartItems">
+
+
+            <p class="empty-cart">
+                Sepetiniz boş.
+            </p>
+
+
+        </div>
+
+
+
+
+        <div class="cart-total">
+
+
+            Toplam:
+            <strong>
+                <span id="cartTotal">0</span> TL
+            </strong>
+
+
+        </div>
+
+
+
+
+        <button id="orderWhatsApp"
+            class="order-whatsapp">
+
+
+            WhatsApp'tan Sipariş Ver
+
+
+        </button>
+
+
+    </div>
+
+      <!--YUKARI CIKMA BUTONU-->
+     <button id="backToTop">⬆</button>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="scripts.js"></script>
+
+
+</body>
+
+
+</html>
