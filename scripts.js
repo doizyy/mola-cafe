@@ -527,7 +527,7 @@ if (orderWhatsApp) {
 
 
         const whatsappNumber =
-            "905337634672";
+            "905555555555";
 
 
 
@@ -625,7 +625,7 @@ if (reservationForm) {
 
 
         const whatsappNumber =
-            "905337634672";
+            "905555555555";
 
 
 
